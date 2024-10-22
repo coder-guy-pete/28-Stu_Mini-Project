@@ -118,7 +118,6 @@ footer h2 {
 }
 
 /* Media Queries to ensure that the webpage is responsive to different screen sizes. */
-
 @media (max-width: 768px) {
     .flex-container {
         flex-direction: column;
