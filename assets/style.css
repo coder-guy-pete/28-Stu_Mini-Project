@@ -1,3 +1,4 @@
+/* Provides standard font color and assigns font-family to all text. */
 * {
     color: rgb(232, 228, 228);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -23,14 +24,16 @@ header p {
     margin: 15px 10%;
 }
 
+/* Aligns all of the flex boxes to the center of the webpage and adds some general styling. */
 .flex-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 5px;
+    gap: 30px;
     margin: 25px 0px;
 }
 
+/* Provides styling to contents within the card(s) */
 .flex-container card {
     display: flex;
     flex-direction: column;
@@ -40,6 +43,7 @@ header p {
     padding: 5px;
 }
 
+/* Adds styling to put the header on the border of the card as well as other minor changes. */
 .flex-container h2 {
     position: relative;
     margin-top: -20px;
@@ -52,12 +56,14 @@ header p {
     padding: 5px 5px;
 }
 
+/* Adds a glow effect on hover to the card headers. */
 .flex-container h2:hover {
     box-shadow: inset 0px 0px 8px
     rgba(232, 102, 236, 1), 0 0 15px
     rgba(232, 102, 236, 1);
 }
 
+/* Adds a gradient to the <pre> element in the flexbox cards. */
 .flex-container pre {
     flex-grow: 1;
     align-content: center;
@@ -67,16 +73,19 @@ header p {
     border-radius: 5px;
 }
 
+/* Adds a box shadow effect on click to the <pre> elements, similar to the box shadow effect that is added to the h2 on hover. */
 .click-shadow {
     box-shadow: inset 0px 0px 8px rgba(232, 102, 236, 1), 0 0 15px rgba(232, 102, 236, 1);
     transition: box-shadow 0.3s ease-in-out;
 }
 
+/* ensures that the box shadow effect fades out. The time is specified in the script.js file.*/
 .click-shadow-fade-out {
     box-shadow: none;
     transition: box-shadow 0.3s ease-in-out;
 }
 
+/* Indicates to the user that the text has been copied when they click on a <pre> element. */
 .copied-message {
     position: absolute;
     top: 0;
@@ -90,10 +99,12 @@ header p {
     transition: opacity 0.3s ease-in-out;
   }
   
+  /* Ensures the copied message goes away after a set amount of time. */
   .copied-message.fade-out {
     opacity: 0;
   }
 
+  /* Adds some spacing between the lines of the code. */
 .flex-container code {
      line-height: 1.5;
 }
@@ -106,7 +117,7 @@ footer h2 {
     margin: 10px 0px;
 }
 
-/* Media Queries */
+/* Media Queries to ensure that the webpage is responsive to different screen sizes. */
 
 @media (max-width: 768px) {
     .flex-container {

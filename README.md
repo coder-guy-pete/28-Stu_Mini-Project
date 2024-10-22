@@ -54,5 +54,3 @@ The completed application should meet the following criteria:
 
 ---
 © 2024 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
-# 28-Stu_Mini-Project
-# 28-Stu_Mini-Project
