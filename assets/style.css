@@ -1,15 +1,21 @@
-/* Provides standard font color and assigns font-family to all text. */
+:root {
+--background-color: rgb(48, 50, 56);
+--primary-color: rgb(232, 102, 236);
+--secondary-color: rgb(232, 228, 228);
+--box-shadow: inset 0px 0px 8px rgba(232, 102, 236, 1), 0 0 15px rgba(232, 102, 236, 1);
+}
+
 * {
-    color: rgb(232, 228, 228);
+    color: var(--secondary-color);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 html {
-    background-color: rgb(48, 50, 56);
+    background-color: var(--background-color);
 }
 
 h1, h2, h3, p {
-    color: rgb(232, 102, 236);
+    color: var(--primary-color);
 }
 
 header {
@@ -17,7 +23,7 @@ header {
 }
 
 .sub-header {
-    color: rgb(232, 228, 228);
+    color: var(--secondary-color);
 }
 
 header p {
@@ -37,15 +43,15 @@ header p {
     flex-direction: column;
     border-style: dashed;
     border-width: 2px;
-    border-color: rgb(232, 228, 228);
+    border-color: var(--secondary-color);
     padding: 5px;
 }
 
 .flex-container h2 {
     position: relative;
     margin-top: -20px;
-    background-color: rgb(48, 50, 56);
-    border-color: rgb(232, 228, 228);
+    background-color: var(--background-color);
+    border-color: var(--secondary-color);
     border-style: solid;
     border-radius: 8px;
     border-width: 2px;
@@ -54,23 +60,19 @@ header p {
 }
 
 .flex-container h2:hover {
-    box-shadow: inset 0px 0px 8px
-    rgba(232, 102, 236, 1), 0 0 15px
-    rgba(232, 102, 236, 1);
+    box-shadow: var(--box-shadow);
 }
 
 .flex-container pre {
     flex-grow: 1;
     align-content: center;
-    background-image: linear-gradient(
-        rgba(232, 102, 236, 0.3) 0%,
-        rgba(232, 102, 236, 0.6) 100%);
+    background-image: linear-gradient(rgba(232, 102, 236, 0.3) 0%, rgba(232, 102, 236, 0.6) 100%);
     border-radius: 5px;
 }
 
 /* Works with JS to add a box shadow effect on click to the <pre> elements, similar to the box shadow effect that is added to the h2 on hover. This works by having the JS add the class to the clicked on <pre> element.*/
 .click-shadow {
-    box-shadow: inset 0px 0px 8px rgba(232, 102, 236, 1), 0 0 15px rgba(232, 102, 236, 1);
+    box-shadow: var(--box-shadow);
     transition: box-shadow 0.3s ease-in-out;
 }
 
@@ -87,20 +89,19 @@ header p {
     right: 0;
     padding: 5px 10px;
     background-color: rgb(103, 104, 107);
-    color: #fff;
+    color: var(--secondary-color);
     font-weight: bold;
     border-radius: 3px;
     opacity: 1;
     transition: opacity 0.3s ease-in-out;
-  }
-  
+}
   /* Ensures the copied message goes away after a set amount of time. */
-  .copied-message.fade-out {
+.copied-message.fade-out {
     opacity: 0;
-  }
+}
 
 .flex-container code {
-     line-height: 1.5;
+    line-height: 1.5;
 }
 
 footer {
