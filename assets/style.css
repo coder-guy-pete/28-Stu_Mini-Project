@@ -24,7 +24,6 @@ header p {
     margin: 15px 10%;
 }
 
-/* Aligns all of the flex boxes to the center of the webpage and adds some general styling. */
 .flex-container {
     display: flex;
     flex-wrap: wrap;
@@ -33,7 +32,6 @@ header p {
     margin: 25px 0px;
 }
 
-/* Provides styling to contents within the card(s) */
 .flex-container card {
     display: flex;
     flex-direction: column;
@@ -43,7 +41,6 @@ header p {
     padding: 5px;
 }
 
-/* Adds styling to put the header on the border of the card as well as other minor changes. */
 .flex-container h2 {
     position: relative;
     margin-top: -20px;
@@ -56,14 +53,12 @@ header p {
     padding: 5px 5px;
 }
 
-/* Adds a glow effect on hover to the card headers. */
 .flex-container h2:hover {
     box-shadow: inset 0px 0px 8px
     rgba(232, 102, 236, 1), 0 0 15px
     rgba(232, 102, 236, 1);
 }
 
-/* Adds a gradient to the <pre> element in the flexbox cards. */
 .flex-container pre {
     flex-grow: 1;
     align-content: center;
@@ -73,7 +68,7 @@ header p {
     border-radius: 5px;
 }
 
-/* Adds a box shadow effect on click to the <pre> elements, similar to the box shadow effect that is added to the h2 on hover. */
+/* Works with JS to add a box shadow effect on click to the <pre> elements, similar to the box shadow effect that is added to the h2 on hover. This works by having the JS add the class to the clicked on <pre> element.*/
 .click-shadow {
     box-shadow: inset 0px 0px 8px rgba(232, 102, 236, 1), 0 0 15px rgba(232, 102, 236, 1);
     transition: box-shadow 0.3s ease-in-out;
@@ -104,7 +99,6 @@ header p {
     opacity: 0;
   }
 
-  /* Adds some spacing between the lines of the code. */
 .flex-container code {
      line-height: 1.5;
 }
