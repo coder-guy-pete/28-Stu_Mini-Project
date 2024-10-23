@@ -16,20 +16,17 @@ document.addEventListener('click', (event) => {
       messageElement.textContent = 'Copied!';
       messageElement.classList.add('copied-message');
 
-      // Calculate the position for the message element
-      const preRect = clickedPre.getBoundingClientRect();
-      const messageTop = preRect.bottom + 5; // Place it 5px below the pre
-      const messageLeft = preRect.left + 5; // Place it 5px to the right of the pre
-
       // Style the message element with absolute positioning
-      messageElement.style.position = 'absolute';
-      messageElement.style.top = `${messageTop}px`;
-      messageElement.style.left = `${messageLeft}px`;
+      messageElement.style.position = 'fixed';
+      messageElement.style.top = '50%'; // Center vertically
+      messageElement.style.left = '50%'; // Center horizontally
+      messageElement.style.transform = 'translate(-50%, -50%)'; // Adjust for centering
 
       // Optionally, adjust the width of the message element
-      messageElement.style.width = `100px`;
+      messageElement.style.width = '15vw';
 
-      document.body.appendChild(messageElement); // Append to body for global positioning
+      // Append the message element to the body
+      document.body.appendChild(messageElement);
 
       // Remove the message after 1 second
       setTimeout(() => {
