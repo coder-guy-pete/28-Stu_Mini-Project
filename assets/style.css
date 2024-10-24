@@ -76,7 +76,7 @@ header p {
     transition: box-shadow 0.3s ease-in-out;
 }
 
-/* ensures that the box shadow effect fades out. The time is specified in the script.js file.*/
+/* Ensures that the box shadow effect fades out. The time is specified in the script.js file.*/
 .click-shadow-fade-out {
     box-shadow: none;
     transition: box-shadow 0.3s ease-in-out;
